@@ -1,0 +1,14 @@
+:root {
+   --cor-primaria: #E6B07E; 
+   --cor-Secundaria: #665E57; 
+   --cor-tom-1: #EAD8C7; 
+   --cor-tom-2: #B38962; 
+   --cor-tom-3: #664E38; 
+   
+   --fonte-titulo: 'Exo', sans-serif;
+   --fonte-corpo:  'Source Serif 4' sans-serif;
+}
+
+body {
+    background-color: var(--cor-tom-1);
+}

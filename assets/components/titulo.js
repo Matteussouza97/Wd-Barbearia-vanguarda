@@ -5,13 +5,13 @@ export class Titulo extends LitElement {
     css`
       :host {
         color: var(--cor-secundaria, #665e57);
-        text-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
-        font-family: Exo;
-        font-size: 48px;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+        font-family: Var(--fonte-titulo);
+        font-size: 3rem;
         font-style: normal;
         font-weight: 700;
         line-height: 100%; /* 48px */
-       
+
         display: block;
       }
     `,
