@@ -6,9 +6,12 @@
    --cor-tom-3: #664E38; 
    
    --fonte-titulo: 'Exo', sans-serif;
-   --fonte-corpo:  'Source Serif 4' sans-serif;
+   --fonte-corpo:  'Source Serif 4', sans-serif;
 }
 
 body {
+    width: 100%;
+    height:100svh; /* smallest view heigth */
+    margin: 0;
     background-color: var(--cor-tom-1);
 }

@@ -18,7 +18,7 @@ export class Titulo extends LitElement {
   ];
 
   render() {
-    return html`Título`;
+    return html`<slot>Título</slot>`;
   }
 }
 customElements.define("app-titulo", Titulo);
