@@ -14,6 +14,16 @@ export class Titulo extends LitElement {
 
         display: block;
       }
+
+      ::slotted(*) {
+        font-size: inherit;
+        margin:0;
+
+      }
+
+
+
+
     `,
   ];
 

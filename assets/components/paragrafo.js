@@ -15,14 +15,17 @@ export class Paragrafo extends LitElement {
       p {
         margin: 0;
       }
+
+
     `,
   ];
 
   render() {
     return html`
-    <slot>
-      <p>parágrafo</p>
-    </slot>`;
+      <p>
+        <slot>parágrafo</slot>
+      </p>
+    `;
   }
 }
 customElements.define("app-paragrafo", Paragrafo);
