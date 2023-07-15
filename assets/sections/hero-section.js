@@ -1,19 +1,11 @@
 import { LitElement, html, css } from "lit";
+import { section } from "../styles/Section-style";
 
 export class HeroSection extends LitElement {
   static styles = [
+    section,
     css`
-      :host {
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4.375rem;
-      }
-
+    
       section {
         display: flex;
         width: 334px;
@@ -36,13 +28,24 @@ export class HeroSection extends LitElement {
       }
 
       app-logo {
-        width: 8rem;
-        height: 8rem;
+        width: 160px;
+        height: 160px;
 
         position: absolute;
-        right: -3.25rem;
-        top: -1.375rem;
+        right: -72px;
+        top: -39px;
       }
+      img {
+        width: auto ;
+        height: 100%;
+      }
+      
+      app-paragrafo {
+        font-size:20PX;
+      }
+
+
+
     `,
   ];
 
@@ -53,7 +56,9 @@ export class HeroSection extends LitElement {
           <h1>Barbearia <span>Vanguarda</span></h1>
           <app-logo></app-logo>
         </app-titulo>
-        <app-quadro></app-quadro>
+        <app-quadro>
+          <img src="Slide1.png" alt="slider1" />
+        </app-quadro>
       </section>
       <app-paragrafo>
         Obtenha um estilo impecável, do cabelo à barba.
