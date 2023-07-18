@@ -65,7 +65,7 @@ export class BaberSection extends LitElement {
         left: -150px;
         top: 72px;
         z-index:-20;
-        background-color:var(--cor-tom-3);
+        --cor-bolinhas:var(--cor-tom-3);
       }
 
 

@@ -33,12 +33,12 @@ export class Bolinhas extends LitElement {
         mask: url("linha-vazadas.svg") no-repeat center;
       }
       .bolinhas {
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         
         -webkit-mask-size: 100%;
         mask-size: 100%;
-        background-color: black;
+        background-color: var(--cor-bolinhas,black);
       }
     `,
   ];
