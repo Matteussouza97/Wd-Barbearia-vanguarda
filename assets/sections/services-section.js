@@ -5,9 +5,7 @@ export class SErvicesSection extends LitElement {
   static styles = [
     section,
     css`
-      :host {
-        display: block;
-      }
+      
       app-bolinhas {
         --cor-bolinhas: var(--cor-tom-3);
         width: 270px;
@@ -22,22 +20,71 @@ export class SErvicesSection extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap:10px;
+        gap: 10px;
+      }
+      span {
+        color: var(--cor-tom-3, #664e38);
+        font-weight: 600;
+      }
+
+      .titulo {
+        width: 270px;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        align-self: stretch;
+      }
+
+      aside {
+        display: flex;
+        padding: 96px 0px 8px 0px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+      }
+
+      article app-paragrafo:first-child {
+        font-weight: 700;
+        color: var(--cor-tom-3, #664e38);
+      }
+      .descricao {
+        width: 108px;
+        font-size: 0.875rem;
+      }
+
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      img {
+        height: 120%;
+      }
+      app-quadro {
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;
       }
     `,
   ];
 
   render() {
     return html`
-      <app-paragrafo
-        >Estilo, cuidado e excelência em cada <span>corte</span>.</app-paragrafo
+      <app-paragrafo class="titulo"
+        >Estilo, cuidado e excelência em cada <span>corte.</span></app-paragrafo
       >
       <section>
-        <app-quadro></app-quadro>
+        <app-quadro><img src="servicos-1.jpg" alt="Servicos" /></app-quadro>
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>
-            <app-paragrafo
+            <app-paragrafo class="descricao"
               >Social, degradê, surfista, militar, razor part,
               undercut</app-paragrafo
             >
