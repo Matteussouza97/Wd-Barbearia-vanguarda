@@ -32,14 +32,10 @@ export class BaberSection extends LitElement {
 
       app-paragrafo {
         width: 270px;
-        color: var(--cor-Secundaria);
         text-align: justify;
-        font-family: var(--font-corpo);
         font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
         line-height: 140%; /* 22.4px */
-        letter-spacing: -0.96px;
+        letter-spacing: -1.424px;
       }
 
       app-quadro {
@@ -69,6 +65,7 @@ export class BaberSection extends LitElement {
         left: -150px;
         top: 72px;
         z-index:-20;
+        background-color:var(--cor-tom-3);
       }
 
 
