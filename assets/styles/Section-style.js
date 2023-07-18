@@ -11,6 +11,7 @@ export const section = css`
         justify-content: center;
         align-items: center;
         gap: 4.375rem;
+        height:100svh; /* smallest view heigth */
 
         padding: 2rem;
         overflow:hidden;
