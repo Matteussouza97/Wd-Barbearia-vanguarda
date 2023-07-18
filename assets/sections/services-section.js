@@ -11,8 +11,16 @@ export class SErvicesSection extends LitElement {
         `
     ];
 
+  
     render() {
-        return html``;
+        return html`
+       <app-bolinhas formato=fila-vazadas></app-bolinhas> 
+        
+        
+        
+        
+        
+        `;
     }
 }
 customElements.define('services-section', SErvicesSection);
