@@ -38,7 +38,8 @@ export class Botao extends LitElement {
       /* efeito */
 
       button:hover, button:active {
-        background-color:var(--tom-2);
+        background-color:color-mix(in srgb, white 15%, var(--button-background,var(--cor-tom-2)));
+        color: var (--cor-tom-1);
       }
 
       ::slotted(*) {

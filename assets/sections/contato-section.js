@@ -5,6 +5,10 @@ export class COntatoSection extends LitElement {
   static styles = [
     section,
     css`
+      :host {
+     gap:0;
+     justify-content:space-between;  
+    }
       img {
         height: 100%;
       }
@@ -12,24 +16,19 @@ export class COntatoSection extends LitElement {
       app-botao,
       div {
         width: 100%;
-       
       }
 
-      div{
-        gap:8px;
-        display:flex;
-        flex-direction:column;
-        
+      div {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
       }
 
-      .whatsapp{
-        --color: color-mix(in srgb,white 40%,var(--cor-tom-1));
-        --button-background:color-mix(in srgb,white 20%, #128C7E 100%);
+      .whatsapp {
+        --color: color-mix(in srgb, white 40%, var(--cor-tom-1));
+        --button-background: color-mix(in srgb, white 20%, #128c7e 100%);
       }
-
     `,
-
-      
   ];
 
   render() {
@@ -41,10 +40,11 @@ export class COntatoSection extends LitElement {
 
       <div>
         <app-botao
-          ><feather-icon  icon="mail"></feather-icon>Nos envie um
+          ><feather-icon icon="mail"></feather-icon>Nos envie um
           E-mail</app-botao
         >
-        <app-botao class="whatsapp"><svg
+        <app-botao class="whatsapp"
+          ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"
             height="24"
