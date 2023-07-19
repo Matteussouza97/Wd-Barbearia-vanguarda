@@ -10,6 +10,7 @@ export *from './components/bolinhas'
 export *from './sections/hero-section'
 export *from './sections/baber-section'
 export *from './sections/services-section'
+export *from './sections/contato-section'
 
 
 //Paginas

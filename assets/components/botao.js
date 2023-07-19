@@ -3,14 +3,12 @@ import { LitElement, html, css } from "lit";
 export class Botao extends LitElement {
   static styles = [
     css`
-      :host {
-      }
+      
 
       button {
-        display: block;
-        display: flex;
-        width: 133px;
-        height: 32px;
+        width:inherit;
+
+        display: inline-flex;
         padding: 5px 24px;
         border:0;
         justify-content: center;
@@ -43,14 +41,18 @@ export class Botao extends LitElement {
         background-color:var(--tom-2);
       }
 
-
+      ::slotted(*) {
+        width:24px;
+        height:24px;
+        margin:5px 8px 5px 0;
+      }
 
 
     `,
   ];
 
   render() {
-    return html`<button><slot>Pressione</slot></button> `;
+    return html`<button> <slot name="icone"></slot>   <slot>Pressione</slot></button> `;
   }
 }
 customElements.define("app-botao", Botao);
