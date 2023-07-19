@@ -11,19 +11,19 @@ export class Botao extends LitElement {
         display: inline-flex;
         padding: 5px 24px;
         border:0;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 10px;
         
        
         border-radius: 8px;
-        background-color:  color-mix(in srgb, white 20%, var(--tom-2, #b38962));
+        background-color: var(--button-background, color-mix(in srgb, white 20%, var(--cor-tom-2, #b38962)));
         box-shadow: 0px 2px 4px 0px #665e57;
 
         /* tipografia */
-        color: var(--tom-3, #664e38);
+        color: var(--color,color-mix(in srgb,black 20%,var(--cor-tom-3, #664e38)));
         text-align: justify;
-        font-family:var(--font-titulo);
+        font-family:var(--fonte-titulo);
         font-size: 1rem;
         font-style: normal;
         font-weight: 700;
