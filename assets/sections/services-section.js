@@ -5,7 +5,10 @@ export class SErvicesSection extends LitElement {
   static styles = [
     section,
     css`
-      
+      :host {
+        padding: 2rem 0;
+      }
+
       app-bolinhas {
         --cor-bolinhas: var(--cor-tom-3);
         width: 270px;
@@ -68,8 +71,10 @@ export class SErvicesSection extends LitElement {
         height: 120%;
       }
       app-quadro {
-        border-top-left-radius:0;
-        border-bottom-left-radius:0;
+        width: 165px;
+        height: 320px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
     `,
   ];
