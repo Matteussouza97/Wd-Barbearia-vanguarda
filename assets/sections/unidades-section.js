@@ -1,27 +1,46 @@
-import { LitElement, html, css } from 'lit';
-import { section } from '../styles/Section-style';
+import { LitElement, html, css } from "lit";
+import { section } from "../styles/Section-style";
 
 export class UnidadesSection extends LitElement {
-    static styles = [
-       section,
-       css`
-            :host {
-                display: flex;
-            }
-        `
-    ];
+  static styles = [
+    section,
+    css`
+      :host {
+        height:fit-content;
+        gap: 32px;
+        padding-bottom:4rem;
+      }
 
-    render() {
-        return html`
-        
-        <app-mapa>
-            <img slot="imagem" src="mapa1.png" alt="" />
-            <h2 slot="titulo">Oi eu sou o goku</h2>
-            <h3 slot="subtitulo">Seu verme maldito</h3>
-        </app-mapa>
-        <app-mapa></app-mapa>
+      app-paragrafo {
+        width: 270px;
+      }
 
-        `;
-    }
+      app-bolinhas {
+        display: flex;
+        width: 104px;
+        height: 208px;
+        transform: rotate(90deg);
+        align-items: flex-start;
+
+        position: absolute;
+        left: -64px;
+        top: -56px;
+        z-index:-10;
+        --cor-bolinhas:var(--cor-tom-3)
+      }
+    `,
+  ];
+
+  render() {
+    return html`
+      <app-paragrafo
+        >Nossa sede, localizada na zona leste de São Paulo, e as demais
+        unidades, estão abertas todos os dias. <br /><br />Confira os horários
+        específicos de cada unidade.</app-paragrafo
+      >
+      <app-mapa></app-mapa>
+      <app-bolinhas formato="fila-metade"></app-bolinhas>
+    `;
+  }
 }
-customElements.define('unidades-section', UnidadesSection);
+customElements.define("unidades-section", UnidadesSection);

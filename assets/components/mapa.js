@@ -3,7 +3,7 @@ import { LitElement, html, css } from "lit";
 export class Mapa extends LitElement {
   static styles = [
     css`
-      * {
+      *, ::slotted(*) {
         margin: 0;
       }
 
@@ -36,13 +36,13 @@ export class Mapa extends LitElement {
         border-radius: 0px 0px 8px 8px;
         background: var(--cor-secundaria, #665e57);
       }
-      .titulo {
+      .titulo,::slotted(h2) {
         font-size: 1rem;
         font-style: normal;
         font-weight: 700;
         letter-spacing: 0.64px;
       }
-      .subtitulo {
+      .subtitulo,::slotted(h3) {
         font-size: 0.5rem;
         font-style: normal;
         font-weight: 400;
@@ -71,8 +71,8 @@ export class Mapa extends LitElement {
         /></slot>
       </figure>
       <address>
-        <slot name="titulo">
-          <h2 class="titulo">Av. Marechal Tito, 2960</h2>
+        <slot  name="titulo">
+          <h2 class="titulo" >Av. Marechal Tito, 2960</h2>
         </slot>
         <slot name="subtitulo">
           <h3 class="subtitulo">São Miguel Paulista, São Paulo</h3>
