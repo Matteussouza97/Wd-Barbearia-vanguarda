@@ -19,15 +19,17 @@ export class Mapa extends LitElement {
         color: #fff;
         font-family: Var(--fonte-titulo);
         line-height: 100%;
+        box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
       }
 
       address {
         display: flex;
         padding: 10px 12px;
+        padding-top: 5px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 6px;
         align-self: stretch;
 
         /* Estilos */
@@ -49,8 +51,14 @@ export class Mapa extends LitElement {
       figure {
         flex: 1 0 0;
         align-self: stretch;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
         border-radius: 8px 8px 0px 0px;
         border: 4px solid var(--cor-secundaria, #665e57);
+      }
+      .imagem, ::slotted(img) {
+        width: 100%;
       }
     `,
   ];
@@ -58,11 +66,17 @@ export class Mapa extends LitElement {
   render() {
     return html`
       <figure>
-        <!-- <img src="mapa1.png" alt= "Matrix da Babearia" /> -->
+        <slot name="imagem"
+          ><img class="imagem" src="mapa1.png" alt="Matrix da Babearia"
+        /></slot>
       </figure>
       <address>
-        <h2 class="titulo">Av. Marechal Tito, 2960</h2>
-        <h3 class="subtitulo">São Miguel Paulista, São Paulo</h3>
+        <slot name="titulo">
+          <h2 class="titulo">Av. Marechal Tito, 2960</h2>
+        </slot>
+        <slot name="subtitulo">
+          <h3 class="subtitulo">São Miguel Paulista, São Paulo</h3>
+        </slot>
       </address>
     `;
   }
