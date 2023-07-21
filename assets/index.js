@@ -16,6 +16,7 @@ export *from './sections/baber-section'
 export *from './sections/services-section'
 export *from './sections/contato-section'
 export *from './sections/unidades-section'
+export *from './sections/menu-section'
 
 
 
