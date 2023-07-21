@@ -26,6 +26,7 @@ export class Rodape extends LitElement {
         justify-content:space-between;
         padding:2rem;
         background-color:color-mix(in srgb, black 20%, var(--cor-tom-3, #664E38));
+        align-items:center;
         
       }
 
@@ -34,11 +35,13 @@ export class Rodape extends LitElement {
         flex-direction:column-reverse;
         align-items:flex-end;
         gap:16px;
+        opacity:0.9;
       }
       app-logo{
         background-color:white;
         width:4rem;
         height:4rem;
+        opacity:0.9;
       }
 
       a {
