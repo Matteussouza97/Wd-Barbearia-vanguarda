@@ -87,7 +87,7 @@ export class BaberSection extends LitElement {
           últimas tendências, garantindo um atendimento personalizado em um
           ambiente acolhedor.
         </app-paragrafo>
-        <app-botao>Leia mais</app-botao>
+        <app-botao><a href="baber">Leia mais</a></app-botao>
       </article>
     `;
   }

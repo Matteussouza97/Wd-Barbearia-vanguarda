@@ -94,7 +94,7 @@ export class SErvicesSection extends LitElement {
               undercut</app-paragrafo
             >
           </article>
-          <app-botao>Ver mais</app-botao>
+          <app-botao><a href="services">Ver mais</a></app-botao>
         </aside>
       </section>
       <div>
