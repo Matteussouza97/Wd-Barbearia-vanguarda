@@ -67,6 +67,9 @@ export class BaberSection extends LitElement {
         z-index:-20;
         --cor-bolinhas:var(--cor-tom-3);
       }
+      app-botao{
+        display:var(--display-botao);
+      }
 
 
     `,
@@ -87,7 +90,7 @@ export class BaberSection extends LitElement {
           últimas tendências, garantindo um atendimento personalizado em um
           ambiente acolhedor.
         </app-paragrafo>
-        <app-botao><a href="baber">Leia mais</a></app-botao>
+        <app-botao><a href="a-barbearia">Leia mais</a></app-botao>
       </article>
     `;
   }

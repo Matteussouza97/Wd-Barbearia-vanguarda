@@ -20,5 +20,3 @@ export *from './sections/menu-section'
 
 
 
-//Paginas
-export *from './pages/home-page'

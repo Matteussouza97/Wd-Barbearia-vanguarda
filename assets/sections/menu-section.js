@@ -96,7 +96,7 @@ export class MenuSection extends LitElement {
           <a href="services"
             >Serviços <feather-icon icon="scissors"></feather-icon
           ></a>
-          <a href="baber"
+          <a href="a-barbearia"
             >A Barbearia
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 29">
               <path

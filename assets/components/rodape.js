@@ -61,7 +61,7 @@ export class Rodape extends LitElement {
           <a href="">Unidades</a>
           <a href="">Contato</a>
           <a href="services">Serviços</a>
-          <a href="baber">A Barbearia</a>
+          <a href="a-barbearia">A Barbearia</a>
           <a href="/">Home</a>
         </nav>
       </footer>
