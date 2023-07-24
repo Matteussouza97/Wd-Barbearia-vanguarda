@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(dialog)
 });
 
+export const nav = {
+  abrir: function () {
+    dialog.showModal()
+  },
+  fechar: function () {
+    dialog.close()
+  },
+}
+
 
 
 /* Navbar dinâmica ao scroll */
