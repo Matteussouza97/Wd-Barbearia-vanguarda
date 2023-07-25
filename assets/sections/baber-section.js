@@ -45,9 +45,7 @@ export class BaberSection extends LitElement {
         position: absolute;
         right: -82px;
         top: 106px;
-        z-index:-10;
-        
-        
+        z-index: -10;
       }
 
       img {
@@ -56,7 +54,7 @@ export class BaberSection extends LitElement {
       }
 
       app-bolinhas {
-        display: flex;  
+        display: flex;
         width: 300px;
         height: 300px;
         justify-content: center;
@@ -64,14 +62,48 @@ export class BaberSection extends LitElement {
         position: absolute;
         left: -150px;
         top: 72px;
-        z-index:-20;
-        --cor-bolinhas:var(--cor-tom-3);
+        z-index: -20;
+        --cor-bolinhas: var(--cor-tom-3);
       }
-      app-botao{
-        display:var(--display-botao);
+      app-botao {
+        display: var(--display-botao);
       }
 
+      @media (min-width: 768px) {
+        app-quadro {
+          width: 600px;
+          height: 600px;
 
+          right: -182px;
+          top: 200px;
+        }
+        app-paragrafo {
+          width: 100%;
+        }
+
+        app-bolinhas {
+          width: 400px;
+          height: 400px;
+
+          left: -20px;
+          top: 272px;
+        }
+        article {
+          width: 60%;
+        }
+      }
+      @media (min-width: 1024px) {
+        app-quadro {
+          top: 100px;
+        }
+
+        app-bolinhas {
+          top: 112px;
+        }
+        article {
+          width: 70%;
+        }
+      }
     `,
   ];
 
@@ -80,7 +112,7 @@ export class BaberSection extends LitElement {
       <app-titulo>A Barbearia</app-titulo>
       <app-bolinhas></app-bolinhas>
       <app-quadro>
-        <img loading="lazy" src="abarbearia.png" alt= "A Barbearia"/>
+        <img loading="lazy" src="abarbearia.png" alt="A Barbearia" />
       </app-quadro>
       <article>
         <app-paragrafo>

@@ -31,6 +31,18 @@ export const section = css`
         }
 
 
+        @media (min-width:1024px) {
+          :host {
+            overflow:visible
+          }
+        }
+
+        @media (min-width:768px) {
+          :host {
+            padding:3rem;
+          }
+        }
+
 
 
 

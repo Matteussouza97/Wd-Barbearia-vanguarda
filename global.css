@@ -11,10 +11,18 @@
 
 body {
     width: 100%;
-    margin: 0;
+    max-width: 1024px;
+    margin: 0 auto;
     background-color: var(--cor-tom-1);
 }
 
 .escondido {
     top: -96px;
+}
+
+
+@media (min-width:768px) {
+    html {
+        font-size: 20px;
+    }
 }

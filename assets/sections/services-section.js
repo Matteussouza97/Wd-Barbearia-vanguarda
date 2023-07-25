@@ -56,6 +56,7 @@ export class SErvicesSection extends LitElement {
       }
       .descricao {
         width: 108px;
+        text-align:center;
         font-size: 0.875rem;
       }
 
@@ -76,6 +77,36 @@ export class SErvicesSection extends LitElement {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
+      @media (min-width: 768px) {
+        :host {
+        padding: 3rem 0 ;
+      }
+        
+        section {
+          align-self: center;
+        }
+        app-quadro {
+          border-radius:8px;
+          width:265px;
+          height:520px;
+        }
+
+        .titulo {
+          font-size:1.25rem;
+          width:330px;
+        }
+        article app-paragrafo:first-child {
+        font-size:1.25rem;
+      }
+      .descricao{
+        font-size:1rem;
+        width:158px;
+      }
+      aside{
+        padding :176px 0px 16px 0px;
+      }
+    
+    }
     `,
   ];
 
@@ -85,7 +116,9 @@ export class SErvicesSection extends LitElement {
         >Estilo, cuidado e excelência em cada <span>corte.</span></app-paragrafo
       >
       <section>
-        <app-quadro><img loading="lazy" src="servicos-1.jpg" alt="Servicos" /></app-quadro>
+        <app-quadro
+          ><img loading="lazy" src="servicos-1.jpg" alt="Servicos"
+        /></app-quadro>
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>
