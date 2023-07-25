@@ -80,7 +80,7 @@ export class BaberSection extends LitElement {
       <app-titulo>A Barbearia</app-titulo>
       <app-bolinhas></app-bolinhas>
       <app-quadro>
-        <img src="abarbearia.png" alt= "A Barbearia"/>
+        <img loading="lazy" src="abarbearia.png" alt= "A Barbearia"/>
       </app-quadro>
       <article>
         <app-paragrafo>

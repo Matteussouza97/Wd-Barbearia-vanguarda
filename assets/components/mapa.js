@@ -67,7 +67,7 @@ export class Mapa extends LitElement {
     return html`
       <figure>
         <slot name="imagem"
-          ><img class="imagem" src="mapa1.png" alt="Matrix da Babearia"
+          ><img loading="lazy" class="imagem" src="mapa1.png" alt="Matrix da Babearia"
         /></slot>
       </figure>
       <address>

@@ -85,7 +85,7 @@ export class SErvicesSection extends LitElement {
         >Estilo, cuidado e excelência em cada <span>corte.</span></app-paragrafo
       >
       <section>
-        <app-quadro><img src="servicos-1.jpg" alt="Servicos" /></app-quadro>
+        <app-quadro><img loading="lazy" src="servicos-1.jpg" alt="Servicos" /></app-quadro>
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>

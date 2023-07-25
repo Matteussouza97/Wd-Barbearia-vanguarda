@@ -49,7 +49,7 @@ export class COntatoSection extends LitElement {
     return html`
       <app-titulo>Entre em contato conosco</app-titulo>
       <app-quadro
-        ><img src="thumb.png" alt="funcionarios recebendo clientes"
+        ><img loading="lazy" src="thumb.png" alt="funcionarios recebendo clientes"
       /></app-quadro>
 
       <div>
