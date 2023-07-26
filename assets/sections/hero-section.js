@@ -39,6 +39,11 @@ export class HeroSection extends LitElement {
         width: auto;
         height: 100%;
       }
+      swiper-container{
+        height: 100%;
+        width: 100%;
+      }
+      
 
       app-paragrafo {
         font-size: 20px;
@@ -73,7 +78,20 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img loading="lazy" src="Slide1.png" alt="slider1" />
+          <swiper-container loop="true" autoplay="true" >
+            <swiper-slide>
+              <img loading="lazy" src="Slide1.png" alt="slider1" />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="slider-2.jpg"
+                alt="slider1"
+              /> </swiper-slide
+            ><swiper-slide>
+              <img loading="lazy" src="slider-3.jpg" alt="slider1" />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
       </section>
       <app-paragrafo>
