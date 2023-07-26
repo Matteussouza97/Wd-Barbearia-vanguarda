@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import { nav } from "../../main";
 
 export class Rodape extends LitElement {
   static styles = [
@@ -13,6 +14,7 @@ export class Rodape extends LitElement {
         display:flex;
         justify-content:center;
         align-items:center;
+        font-family:var(--fonte-titulo);
         
         width:100%;
         height:2rem;
@@ -21,7 +23,7 @@ export class Rodape extends LitElement {
         
         
       }
-      footer{
+      footer,button{
         display:flex;
         justify-content:space-between;
         padding:2rem;
@@ -44,9 +46,27 @@ export class Rodape extends LitElement {
         opacity:0.9;
       }
 
-      a {
+      a,button {
         color:white;
+        font-size:.75rem;
         text-decoration:none;
+        font-family:var(--fonte-titulo);
+        opacity:0.9;
+        cursor:poiter;
+      transition:color 300ms;
+      }
+      button{
+        padding:0;
+        border:0;
+        background: trasparent;
+      }
+      
+      a:hover,button:hover {
+        color:var(--tom-1);
+      }
+
+      a:active, button:active {
+        color:var(--cor-primaria);
       }
       /* responsivo desktop */
       @media (min-width: 1024px){
@@ -59,14 +79,21 @@ export class Rodape extends LitElement {
     `,
   ];
 
+    rolarContato() {
+      return nav.rolarPara('#contato')
+    }
+    rolarUnidades() {
+      return nav.rolarPara('#unidades')
+    }
+
   render() {
     return html`
       <footer>
         <app-logo></app-logo>
         <nav>
-          <a href="">Unidades</a>
-          <a href="">Contato</a>
-          <a href="services">Serviços</a>
+          <button @click=${this.rolarUnidades}>Unidades</button>   
+          <button @click=${this.rolarContato}>Contato</button> 
+            <a href="services">Serviços</a>
           <a href="a-barbearia">A Barbearia</a>
           <a href="/">Home</a>
         </nav>

@@ -1,4 +1,5 @@
 import "./assets";
+import { Router } from "@vaadin/router";
 import { initRouter } from "./assets/router";
 
 let navbar;
@@ -11,22 +12,33 @@ document.addEventListener("DOMContentLoaded", function () {
   navbar = document.querySelector("app-navbar");
 
   dialog = document
-  .querySelector("menu-section")
-  .shadowRoot.querySelector("dialog");
+    .querySelector("menu-section")
+    .shadowRoot.querySelector("dialog");
 
-  console.log(dialog)
+  console.log(dialog);
 });
 
 export const nav = {
   abrir: function () {
-    dialog.showModal()
+    dialog.showModal();
+    navbar.classList.add("escondido");
+  },
+  rolarPara: function (secao) {
+    Router.go("/");
+    router.ready.then(() => {
+      document
+        .querySelector("home-page")
+        .shadowRoot.querySelector(secao)
+        .scrollIntoView();
+
+      this.fechar()
+
+    });
   },
   fechar: function () {
-    dialog.close()
+    dialog.close();
   },
-}
-
-
+};
 
 /* Navbar dinâmica ao scroll */
 let prevScrollpos = window.pageYOffset;

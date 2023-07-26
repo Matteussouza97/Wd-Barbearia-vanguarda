@@ -15,6 +15,7 @@ export class Navbar extends LitElement {
         position: fixed;
         top: 0;
         left:0;
+        pointer-events: none;
 
         box-sizing: border-box;
         z-index: 100;
@@ -31,6 +32,7 @@ export class Navbar extends LitElement {
 
       feather-icon {
         cursor: pointer;
+        pointer-events: auto;
       }
       /* responsivo tablet */
       @media (min-width: 768px) {
