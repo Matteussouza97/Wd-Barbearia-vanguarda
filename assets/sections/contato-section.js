@@ -37,6 +37,22 @@ export class COntatoSection extends LitElement {
 
         margin: 5px 8px 5px 0;
       }
+
+      /* responsivo tablet */
+      @media (min-width: 768px) {
+        div {
+          flex-direction:row;
+        }
+      }
+      /* responsivo desktop */
+      @media (min-width: 1024px) {
+        div{
+          max-width:80%;
+        }
+        app-quadro{
+          width:70%;
+        }
+      }
     `,
   ];
 

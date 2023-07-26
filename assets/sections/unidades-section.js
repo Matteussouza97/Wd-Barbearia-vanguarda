@@ -28,6 +28,18 @@ export class UnidadesSection extends LitElement {
         z-index:-10;
         --cor-bolinhas:var(--cor-tom-3)
       }
+      /* responsivo tablet */
+      @media (min-width: 768px){
+        app-paragrafo{
+          width:100%;
+          max-width:500px;
+          text-align:center;
+        }
+        app-mapa{
+          width:400px;
+          height:300px;
+        }
+      }
     `,
   ];
 

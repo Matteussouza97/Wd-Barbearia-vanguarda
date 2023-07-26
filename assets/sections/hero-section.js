@@ -51,7 +51,15 @@ export class HeroSection extends LitElement {
         app-logo {
           width: 220px;
           height: 220px;
-          right: -467px;
+          right: -90px;
+        }
+
+        @media (min-width: 768px) {
+       
+        app-logo {
+          width: 220px;
+          height: 220px;
+          right: -90px;
         }
       }
     `,

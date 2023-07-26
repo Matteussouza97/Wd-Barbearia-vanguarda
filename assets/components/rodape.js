@@ -48,7 +48,13 @@ export class Rodape extends LitElement {
         color:white;
         text-decoration:none;
       }
-
+      /* responsivo desktop */
+      @media (min-width: 1024px){
+        :host{
+          border-radius:2rem 2rem 0 0 ;
+          overflow:hidden;
+        }
+      }
     
     `,
   ];

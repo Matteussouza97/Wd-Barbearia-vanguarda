@@ -69,6 +69,7 @@ export class BaberSection extends LitElement {
         display: var(--display-botao);
       }
 
+      /* responsivo tablet */
       @media (min-width: 768px) {
         app-quadro {
           width: 600px;
@@ -92,6 +93,8 @@ export class BaberSection extends LitElement {
           width: 60%;
         }
       }
+
+      /* responsivo desktop */
       @media (min-width: 1024px) {
         app-quadro {
           top: 100px;
@@ -102,6 +105,11 @@ export class BaberSection extends LitElement {
         }
         article {
           width: 70%;
+          border-image-source: linear-gradient(
+            20deg,
+            rgba(102, 78, 56, 0) 50%,
+            rgba(102, 78, 56, 1) 100%
+          );
         }
       }
     `,

@@ -56,7 +56,7 @@ export class SErvicesSection extends LitElement {
       }
       .descricao {
         width: 108px;
-        text-align:center;
+        text-align: center;
         font-size: 0.875rem;
       }
 
@@ -77,36 +77,44 @@ export class SErvicesSection extends LitElement {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
+
+      /* Responsivo tablet */
       @media (min-width: 768px) {
         :host {
-        padding: 3rem 0 ;
-      }
-        
+          padding: 3rem 0;
+        }
+
         section {
           align-self: center;
         }
         app-quadro {
-          border-radius:8px;
-          width:265px;
-          height:520px;
+          border-radius: 8px;
+          width: 265px;
+          height: 520px;
         }
 
         .titulo {
-          font-size:1.25rem;
-          width:330px;
+          font-size: 1.25rem;
+          width: 330px;
         }
         article app-paragrafo:first-child {
-        font-size:1.25rem;
+          font-size: 1.25rem;
+        }
+        .descricao {
+          font-size: 1rem;
+          width: 158px;
+        }
+        aside {
+          padding: 176px 0px 16px 0px;
+        }
       }
-      .descricao{
-        font-size:1rem;
-        width:158px;
+
+      /*Responsivo Desktop */
+      @media (min-width: 1024px) {
+        div {
+          display: none;
+        }
       }
-      aside{
-        padding :176px 0px 16px 0px;
-      }
-    
-    }
     `,
   ];
 
