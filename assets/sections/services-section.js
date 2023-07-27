@@ -67,9 +67,24 @@ export class SErvicesSection extends LitElement {
         justify-content: center;
         gap: 16px;
       }
+      swiper-container {
+        height: 100%;
+        width: 100%;
+      }
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      app-quadro {
+        background: transparent;
+      }
 
       img {
-        height: 120%;
+        height: 100%;
+      }
+      .primeira-imagen{
+        height:120%;
       }
       app-quadro {
         width: 165px;
@@ -124,9 +139,26 @@ export class SErvicesSection extends LitElement {
         >Estilo, cuidado e excelência em cada <span>corte.</span></app-paragrafo
       >
       <section>
-        <app-quadro
-          ><img loading="lazy" src="servicos-1.jpg" alt="Servicos"
-        /></app-quadro>
+        <app-quadro>
+          <swiper-container
+            loop="true"
+            autoplay="true"
+            speed="750"
+            disabled-on-interaction="false"
+            effect="fade"
+            simulate-touch="false"
+          >
+            <swiper-slide
+              ><img class="primeira-imagen" loading="lazy" src="servicos-1.jpg" alt="Servicos"
+            /></swiper-slide>
+            <swiper-slide
+              ><img loading="lazy" src="servicos-2.jpg" alt="Servicos"
+            /></swiper-slide>
+            <swiper-slide
+              ><img loading="lazy" src="servicos-3.jpg" alt="Servicos"
+            /></swiper-slide>
+          </swiper-container>
+        </app-quadro>
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>

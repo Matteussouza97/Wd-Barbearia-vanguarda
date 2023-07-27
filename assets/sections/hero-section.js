@@ -43,6 +43,9 @@ export class HeroSection extends LitElement {
         height: 100%;
         width: 100%;
       }
+      app-quadro{
+        background:transparent;
+      }
       
 
       app-paragrafo {
@@ -78,7 +81,21 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <swiper-container loop="true" autoplay="true" >
+          <swiper-container
+            loop="true"
+            autoplay="true"
+            speed="5000"
+            disabled-on-interaction="false"
+            effect="coverflow"
+            simulate-touch="false"
+            centered-slides="true"
+            
+            coverflow-effect-rotate="50"
+            coverflow-effect-stretch="0"
+            coverflow-effect-depth="100"
+            coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="true"
+          >
             <swiper-slide>
               <img loading="lazy" src="Slide1.png" alt="slider1" />
             </swiper-slide>
