@@ -1,8 +1,10 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/Section-style";
 
 export class COntatoSection extends LitElement {
   static styles = [
+    animate,
     section,
     css`
       :host {
@@ -38,37 +40,53 @@ export class COntatoSection extends LitElement {
         margin: 5px 8px 5px 0;
       }
 
+      app-quadro{
+        z-index:10;
+      }
+
       /* responsivo tablet */
       @media (min-width: 768px) {
         div {
-          flex-direction:row;
+          flex-direction: row;
         }
       }
       /* responsivo desktop */
       @media (min-width: 1024px) {
-        div{
-          max-width:80%;
+        div {
+          max-width: 80%;
         }
-        app-quadro{
-          width:70%;
+        app-quadro {
+          width: 70%;
         }
       }
     `,
   ];
 
   mensagemWhatsapp() {
-    const mensagem ="Olá! Eu olhei o site da barbearia e gostaria de mais informações. Com quem posso falar?"
-    return encodeURIComponent(mensagem)
+    const mensagem =
+      "Olá! Eu olhei o site da barbearia e gostaria de mais informações. Com quem posso falar?";
+    return encodeURIComponent(mensagem);
   }
   render() {
     const numeroWhatsapp = "5511982865226";
     return html`
-      <app-titulo>Entre em contato conosco</app-titulo>
+      <app-titulo
+        class="animate__animated animate__delay-1s"
+        data-toggle-class="animate__fadeInUp"
+        >Entre em contato conosco</app-titulo
+      >
       <app-quadro
-        ><video data-src="video-contato.webm" poster="thumb-contato.webp" autoplay muted loop ></video>
+        ><video
+          data-src="video-contato.webm"
+          poster="thumb-contato.webp"
+          autoplay
+          muted
+          loop
+        ></video>
       </app-quadro>
 
-      <div>
+      <div class="titulo animate__animated animate__delay-1s"
+        data-toggle-class="animate__fadeIn">
         <app-botao>
           <a href="mailto:contato@barbeariavanguarda.com.br">
             <feather-icon icon="mail"></feather-icon>Nos envie um E-mail

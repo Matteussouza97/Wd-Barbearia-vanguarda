@@ -1,11 +1,15 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/Section-style";
 
 export class HeroSection extends LitElement {
   static styles = [
+    animate,
     section,
     css`
-     
+     :host {
+      --animate-delay: 0.3s;
+     }
       section {
         display: flex;
         flex-direction: column;
@@ -13,9 +17,12 @@ export class HeroSection extends LitElement {
         gap: 0.5rem;
       }
 
-      span {
+      .vanguarda {
         color: var(--tom-3, #664e38);
         font-weight: 900;
+      }
+      span{
+        display:inline-block;
       }
 
       app-titulo {
@@ -52,6 +59,17 @@ export class HeroSection extends LitElement {
         font-size: 20px;
       }
 
+      @keyframes slideInUp {
+        0% {
+          transform: translate3d(0px, 200%, 0px);
+          visibility: visible;
+        }
+        100% {
+          transform: translateZ(0px);
+        }
+      }
+      
+
       @media (min-width: 1024px) {
         app-paragrafo {
           display: none;
@@ -77,7 +95,18 @@ export class HeroSection extends LitElement {
     return html`
       <section>
         <app-titulo>
-          <h1>Barbearia <br /><span>Vanguarda</span></h1>
+          <h1>
+            <span
+              class="animate__animated animate__fast"
+              data-toggle-class="animate__slideInUp"
+              >Barbearia</span
+            >
+            <br /><span
+              class="vanguarda animate__animated animate__delay-1s"
+              data-toggle-class="animate__slideInUp"
+              >Vanguarda</span
+            >
+          </h1>
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
@@ -89,7 +118,6 @@ export class HeroSection extends LitElement {
             effect="coverflow"
             simulate-touch="false"
             centered-slides="true"
-            
             coverflow-effect-rotate="50"
             coverflow-effect-stretch="0"
             coverflow-effect-depth="100"
@@ -97,7 +125,7 @@ export class HeroSection extends LitElement {
             coverflow-effect-slide-shadows="true"
           >
             <swiper-slide>
-              <img  src="Slide1.png" alt="slider1" />
+              <img src="Slide1.png" alt="slider1" />
             </swiper-slide>
             <swiper-slide>
               <img
@@ -111,7 +139,8 @@ export class HeroSection extends LitElement {
           </swiper-container>
         </app-quadro>
       </section>
-      <app-paragrafo>
+      <app-paragrafo class="titulo animate__animated animate__delay-5s"
+        data-toggle-class="animate__fadeIn">
         Obtenha um estilo impecável, do cabelo à barba.
       </app-paragrafo>
     `;

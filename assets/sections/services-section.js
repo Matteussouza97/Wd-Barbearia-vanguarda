@@ -1,8 +1,10 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/Section-style";
 
 export class SErvicesSection extends LitElement {
   static styles = [
+    animate,
     section,
     css`
       :host {
@@ -48,6 +50,7 @@ export class SErvicesSection extends LitElement {
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
+        z-index:-10;
       }
 
       article app-paragrafo:first-child {
@@ -83,8 +86,8 @@ export class SErvicesSection extends LitElement {
       img {
         height: 100%;
       }
-      .primeira-imagen{
-        height:120%;
+      .primeira-imagen {
+        height: 120%;
       }
       app-quadro {
         width: 165px;
@@ -135,11 +138,16 @@ export class SErvicesSection extends LitElement {
 
   render() {
     return html`
-      <app-paragrafo class="titulo"
+      <app-paragrafo
+        class="titulo animate__animated animate__delay-1s"
+        data-toggle-class="animate__fadeIn"
         >Estilo, cuidado e excelência em cada <span>corte.</span></app-paragrafo
       >
       <section>
-        <app-quadro>
+        <app-quadro
+          class="titulo animate__animated"
+          data-toggle-class="animate__fadeInLeft"
+        >
           <swiper-container
             loop="true"
             autoplay="true"
@@ -149,7 +157,11 @@ export class SErvicesSection extends LitElement {
             simulate-touch="false"
           >
             <swiper-slide
-              ><img class="primeira-imagen" loading="lazy" src="servicos-1.jpg" alt="Servicos"
+              ><img
+                class="primeira-imagen"
+                loading="lazy"
+                src="servicos-1.jpg"
+                alt="Servicos"
             /></swiper-slide>
             <swiper-slide
               ><img loading="lazy" src="servicos-2.jpg" alt="Servicos"
@@ -159,7 +171,10 @@ export class SErvicesSection extends LitElement {
             /></swiper-slide>
           </swiper-container>
         </app-quadro>
-        <aside>
+        <aside
+          class="titulo animate__animated animate__delay-1s"
+          data-toggle-class="animate__fadeInLeft"
+        >
           <article>
             <app-paragrafo>Corte</app-paragrafo>
             <app-paragrafo class="descricao"
